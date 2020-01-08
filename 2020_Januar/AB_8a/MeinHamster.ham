@@ -60,5 +60,32 @@ class MeinHamster extends Hamster
 		}
 		
 	}
+	
+	boolean kreuzung()
+	{
+		int n = 0;
+		super.linksUm();
+		if(super.vornFrei())
+		{
+			n++;
+		}
+		kehrt();
+		if(super.vornFrei())
+		{
+			n++;
+		}
+		super.linksUm();
+		if(super.vornFrei())
+		{
+			n++;
+		}
+		if(n >= 2)
+		{
+			return true;
+		} else
+		{
+			return false;
+		}
+	}
 	    
 }
