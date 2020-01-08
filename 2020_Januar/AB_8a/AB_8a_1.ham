@@ -1,0 +1,34 @@
+void main()
+{
+	
+	Dood hamster = new Dood(0,0,1,0);
+	int n = 0;
+	while(hamster.vornFrei())
+	{
+		if(hamster.kornDa())
+		{
+			n++;
+			if(n == 2)
+			{
+				n=0;
+				hamster.nimm();
+			}
+		}
+		hamster.vor();	
+	}
+	hamster.linksUm();
+	hamster.linksUm();
+	while(hamster.vornFrei())
+	{
+		if(hamster.kornDa())
+		{
+			n++;
+			if(n == 3)
+			{
+				n=0;
+				hamster.nimm();
+			}
+		}
+		hamster.vor();	
+	}
+}
