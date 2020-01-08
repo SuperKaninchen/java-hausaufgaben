@@ -1,0 +1,64 @@
+class MeinHamster extends Hamster
+{
+	
+	MeinHamster (int x, int y, int d, int n)
+    {
+		super(x, y, d, n);
+	}
+	
+	boolean zweiKornDa()
+	{
+		
+		if(super.kornDa())
+		{
+			super.nimm();
+		} else
+		{
+			return false;
+		}
+		
+		if(super.kornDa())
+		{
+			super.nimm();
+		} else
+		{
+			super.gib();
+			return false;
+		}
+		
+		super.gib();
+		super.gib();
+		return true;
+		
+		
+	}
+	
+	void kehrt()
+	{
+		super.linksUm();
+		super.linksUm();
+	}
+	
+	void tunnel()
+	{
+		
+		if(super.vornFrei())
+		{
+			super.vor();
+		} else
+		{
+			super.linksUm();
+			
+			if(super.vornFrei())
+			{
+				super.vor();
+			} else
+			{
+				kehrt();
+				super.vor();
+			}
+		}
+		
+	}
+	    
+}
