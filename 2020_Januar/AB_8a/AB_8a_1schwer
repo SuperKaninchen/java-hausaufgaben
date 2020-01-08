@@ -1,0 +1,37 @@
+void main()
+{
+	
+	MeinHamster hamster = new MeinHamster(0,0,1,0);
+	int n = 0;
+	int schritte = 0;
+	while(!hamster.zweiKornDa())
+	{
+		if(hamster.kornDa())
+		{
+			n++;
+			if(n == 2)
+			{
+				n=0;
+				hamster.nimm();
+			}
+		}
+		hamster.tunnel();
+		schritte++;
+	}
+	hamster.linksUm();
+	hamster.linksUm();
+	while(schritte > 0)
+	{
+		if(hamster.kornDa())
+		{
+			n++;
+			if(n == 3)
+			{
+				n=0;
+				hamster.nimm();
+			}
+		}
+		hamster.tunnel();
+		schritte--;
+	}
+}
