@@ -1,34 +1,34 @@
 void main()
 {
 	
-	Dood hamster = new Dood(0,0,1,0);
+	HausaufgabenHamster ham = new HausaufgabenHamster(0,0,1,0);
 	int n = 0;
-	while(hamster.vornFrei())
+	while(ham.vornFrei())
 	{
-		if(hamster.kornDa())
+		if(ham.kornDa())
 		{
 			n++;
 			if(n == 2)
 			{
 				n=0;
-				hamster.nimm();
+				ham.nimm();
 			}
 		}
-		hamster.vor();	
+		ham.vor();	
 	}
-	hamster.linksUm();
-	hamster.linksUm();
-	while(hamster.vornFrei())
+	ham.linksUm();
+	ham.linksUm();
+	while(ham.vornFrei())
 	{
-		if(hamster.kornDa())
+		if(ham.kornDa())
 		{
 			n++;
 			if(n == 3)
 			{
 				n=0;
-				hamster.nimm();
+				ham.nimm();
 			}
 		}
-		hamster.vor();	
+		ham.vor();	
 	}
 }
