@@ -1,37 +1,37 @@
 void main()
 {
 	
-	MeinHamster hamster = new MeinHamster(0,0,1,0);
+	HausaufgabenHamster ham = new HausaufgabenHamster(0,0,1,0);
 	int n = 0;
 	int schritte = 0;
-	while(!hamster.zweiKornDa())
+	while(!ham.zweiKornDa())
 	{
-		if(hamster.kornDa())
+		if(ham.kornDa())
 		{
 			n++;
 			if(n == 2)
 			{
 				n=0;
-				hamster.nimm();
+				ham.nimm();
 			}
 		}
-		hamster.tunnel();
+		ham.tunnel();
 		schritte++;
 	}
-	hamster.linksUm();
-	hamster.linksUm();
+	ham.linksUm();
+	ham.linksUm();
 	while(schritte > 0)
 	{
-		if(hamster.kornDa())
+		if(ham.kornDa())
 		{
 			n++;
 			if(n == 3)
 			{
 				n=0;
-				hamster.nimm();
+				ham.nimm();
 			}
 		}
-		hamster.tunnel();
+		ham.tunnel();
 		schritte--;
 	}
 }
