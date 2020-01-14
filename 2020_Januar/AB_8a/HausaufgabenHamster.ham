@@ -1,7 +1,7 @@
-class MeinHamster extends Hamster
+class HausaufgabenHamster extends Hamster
 {
 	
-	MeinHamster (int x, int y, int d, int n)
+	HausaufgabenHamster (int x, int y, int d, int n)
     {
 		super(x, y, d, n);
 	}
