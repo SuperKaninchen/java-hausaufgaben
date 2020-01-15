@@ -1,0 +1,41 @@
+/*class*/class ZaehlHamster extends Hamster {
+    
+    ZaehlHamster(int a, int b, int c, int d)
+    {
+    	
+    	super(a, b, c, d);
+    	
+    }
+    
+    void frissAnzahlKoerner()
+    {
+    	
+    	for(int anzahlkoerner = 0; anzahlkoerner < 5; anzahlkoerner++)
+    	{
+    		
+    		if(super.kornDa())
+    		{
+    			
+    			super.nimm();
+    			
+    		}
+    	}
+    }
+    
+    void frissAnzahlKoernerWhile()
+    {
+    	int anzahlkoerner = 0;
+    	while(anzahlkoerner < 5)
+    	{
+    		
+    		if(super.kornDa())
+    		{
+    			
+    			super.nimm();
+    			
+    		}
+    		anzahlkoerner++;
+    	}
+    }
+    
+}
