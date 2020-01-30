@@ -1,0 +1,9 @@
+/*imperative program*/void main() {
+	
+	MeinHamster Pauline = new MeinHamster(1, 1, 1, 1, 5);
+	MeinHamster Paul = new MeinHamster(2, 1, 1, 1, Pauline.getAnzahlSchritte());
+	
+	Pauline.lauf();
+	Paul.lauf();
+	
+}

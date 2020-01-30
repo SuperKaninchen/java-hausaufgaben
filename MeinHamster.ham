@@ -1,0 +1,38 @@
+/*class*/class MeinHamster extends Hamster {
+	
+	private int anzahlschritte;
+	
+	MeinHamster(int x, int y, int d, int n, int nAnzahlschritte)
+	{
+		
+		super(x, y, d, n);
+		anzahlschritte = nAnzahlschritte;
+		
+	}
+	
+	void lauf()
+	{
+		
+		for(int i = 0; i < anzahlschritte; i++)
+		{
+			
+			super.vor();
+			
+		}
+		
+	}
+	
+	void setAnzahlSchritte(int nAnzahlschritte)
+	{
+		
+		anzahlschritte = nAnzahlschritte;
+		
+	}
+	int getAnzahlSchritte()
+	{
+		
+		return anzahlschritte;
+		
+	}
+	
+}
