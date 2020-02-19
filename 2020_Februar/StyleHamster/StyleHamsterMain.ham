@@ -1,0 +1,14 @@
+/*imperative program*/void main() {
+    //© Max Nijenhuis 2020
+    StyleHamster ham = new StyleHamster(1, 1, 1, "farbe");
+    for(int i = 0; i < 23; i++)
+    {
+    	ham.nimm();
+    	System.out.println("Schritt: " + i + " | Gewicht: " + ham.getGewicht());
+    }
+    for(int i = 0; i < 11; i++)
+    {
+    	ham.vor();
+    	System.out.println("Schritt: " + i + " | Alter: " + ham.getAlter());
+    }
+}

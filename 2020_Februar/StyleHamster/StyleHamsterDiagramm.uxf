@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>140</y>
+      <w>390</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>StyleHamster
+--
+- fellfarbe:String
+- gewicht:int
+- anzahlkoerner:int
+- anzahlschritte
+- alter:int
+--
+© StyleHamster(x:int, y:int, d:int, pFellfarbe:String)
++ getFellfarbe():String
++ getGewicht():int
++ getAlter():int
+
++ nimm():void
++ vor():void
+
+- aktualisiereGewicht():void
+- aktualisiereAlter():void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>250</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*ham*
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>130</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;120.0</additional_attributes>
+  </element>
+</diagram>

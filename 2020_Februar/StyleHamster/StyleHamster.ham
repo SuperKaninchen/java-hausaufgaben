@@ -1,0 +1,61 @@
+/*class*//*	© Max Nijenhuis 2020
+ *  Aufgabe 1: Schreibe ein Programm zum Testen der Klasse
+ *        (Hamster erzeugen, Körner fressen lassen, Gewicht ausgeben).
+ *  Aufgabe 2: Kommentiere den Quelltext!
+ *  Aufgabe 3: Ergänze ein Attribut "alter" mit entsprechenden get-set-Methoden, soweit sinnvoll.
+ *  Aufgabe 4: Das Alter des Hamsters erhöht sich in Abhängigkeit von seinen gelaufenen Schritten:
+ *        Alle 10 Schritte erhöht sich das Alter um 1.
+ */
+class StyleHamster extends Hamster {    
+	private String fellfarbe;	//Deklarierung der Variable "fellfarbe" vom Typ "String"
+	private int gewicht;		//Deklarierung der Variable "gewicht" vom Typ "int"
+	private int anzahlkoerner;	//Deklarierung der Variable "anzahlkoerner" vom Typ "int"
+	private int anzahlschritte;	//Deklarierung der Variable "anzahlschritte" vom Typ "int"
+	private int alter;			//Deklarierung der Variable "alter" vom Typ "int"
+	   
+	StyleHamster(int x, int y, int d, String pFellfarbe) {	//Konstruktor
+		super(x,y,d,0);			//Erstellt einen neuen Hamster
+		fellfarbe = pFellfarbe;	//Setzt die private Variable "fellfarbe" auf den Wert des Parameters "pFellfarbe"
+		gewicht = 1;			//Setzt die private Variable "fellfarbe" auf 1
+		anzahlschritte = 0;		//Setzt die private Variable "anzahlschritte" auf 0
+		alter = 0;				//Setzt die private Variable "alter" auf 0
+	}
+	
+	public String getFellfarbe(){
+		return fellfarbe;		//Gibt den Wert der privaten Variable "fellfarbe" aus
+	}
+	public int getGewicht(){
+		return gewicht;			//Gibt den Wert der privaten Variable "gewicht" aus
+	}
+	public int getAlter(){
+		return alter;			//Gibt den Wert der privaten Variable "alter" aus
+	}
+	
+	public void nimm(){	//"Überschreibt" "nimm"-Methode mittels overloading
+		super.nimm();			//Nimmt ein Korn
+		anzahlkoerner++;		//Zählt die private Variable "anzahlkoerner" um 1 nach oben
+		aktualisiereGewicht();	//Ruft die Methode "aktualisiereGewicht" auf
+	}
+	public void vor() {//"Überschreibt" "vor"-Methode mittels overloading
+		super.vor();			//Geht einen Schritt weiter
+		anzahlschritte++;		//Zählt die private Variable "anzahlschritte" um 1 nach oben
+		aktualisiereAlter();	//Ruft die Methode "aktualisiereAlter" auf
+	}
+	
+	private void aktualisiereGewicht(){
+		if(anzahlkoerner == 5){	//Vergleicht den Wert der Variable "anzahlkoerner" mit 5
+			gewicht++;			//Zählt die private Variable "gewicht" um 1 nach oben
+			anzahlkoerner = 0;	//Setzt die private Variable "anzahlkoerner" auf 0
+		}
+	}
+	private void aktualisiereAlter(){
+		if(anzahlschritte == 10){	//Vergleicht den Wert der Variable "anzahlkoerner" mit 5
+			alter++;			//Zählt die private Variable "gewicht" um 1 nach oben
+			anzahlschritte= 0;	//Setzt die private Variable "anzahlkoerner" auf 0
+		}
+	}
+	
+}
+
+
+//© Max Nijenhuis 2020
