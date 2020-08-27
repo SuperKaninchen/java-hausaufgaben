@@ -2,36 +2,35 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Datenbank {
-	
-	private List<CD> CDListe;
-	private List<DVD> DVDListe;
-	private List<Medium> MediumListe;
-	
-	public Datenbank() {
-		CDListe = new ArrayList<CD>();
-		DVDListe = new ArrayList<DVD>();
-		MediumListe = new ArrayList<Medium>();
-	}
-	
-	public void erfasseCD(CD neueCD) {
-		CDListe.add(neueCD);
-	}
-	public void erfasseDVD(DVD neueDVD) {
-		DVDListe.add(neueDVD);
-	}
-	public void auflisten() {
-		System.out.println("===| Alle CDs: |===");
-		for (CD cd : CDListe) {
-			System.out.println(cd.ausgeben());
-		}
-		System.out.println("===| Alle DVDs: |===");
-		for (DVD dvd : DVDListe) {
-			System.out.println(dvd.ausgeben());
-		}
-		System.out.println("===| Alle Medien: |===");
-		for (Medium medium : MediumListe) {
-			System.out.println(medium.ausgeben());
-		}
-	}
-	
+  
+  private Medium[] MediumListe;
+  
+  public Datenbank() {
+    MediumListe = new Medium[0];
+    auflisten();
+    erfasseMedium(new CD("Neue CD", true, "ziemlich langweilig", "REEEEE", new String[]{"Track1", "Track2"}));
+    erfasseMedium(new DVD("Neue DvD", true, "krasser film", "irgendein dude"));
+    erfasseMedium(new Medium("Neues Medium", true, "ne kassette oder so idk"));
+    auflisten();
+  }
+  
+  public static void main(String[] args) {
+    new Datenbank();
+  }
+  public void erfasseMedium(Medium neuesMedium) {
+    Medium[] tmp = new Medium[MediumListe.length+1];
+    for (int i = 0; i < MediumListe.length; i++) {
+      tmp[i] = MediumListe[i];
+    }
+    tmp[MediumListe.length] = neuesMedium;
+    MediumListe = tmp;
+  }
+  public void auflisten() {
+    System.out.println("===| Alle Medien: |===");
+    for (Medium medium : MediumListe) {
+      System.out.println(medium.ausgeben());
+    }
+    System.out.println("\n\n");
+  }
+  
 }
