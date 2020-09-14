@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>280</y>
+      <w>220</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Patient
+--
+- vorname: String
+- nachname: String
+- krankenkasse: String
+--
+© Patient(pVorname: String,
+                pNachname: String,
+                pKrankenkasse: String)
++ getName(): String
++ getKrankenkasse(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>280</y>
+      <w>250</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>QueueNode
+--
+- content: ContentType
+- next: QueueNode
+--
+© QueueNode(pContent: ContentType)
++ getContent(): ContentType
++ getNext(): QueueNode
++ setNext(pNext: QueueNode): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>280</y>
+      <w>260</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Queue
+--
+- first: QueueNode
+--
+© Queue()
++ front(): ContentType
++ isEmpty(): boolean
++ enqueue(pContent: ContentType): void
++ dequeue(): ContentType</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>340</x>
+      <y>560</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Verwaltung
+--
+© Verwaltung()
+__- main(args: String[]): void__</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>400</y>
+      <w>30</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+  </element>
+</diagram>
