@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>160</y>
+      <w>192</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Patient
+--
+- vorname: String
+- nachname: String
+- krankenkasse: String
+--
+© Patient(pVorname: String,
+                pNachname: String,
+                pKrankenkasse: String)
++ getVorname(): String
++ getNachname(): String
++ getKrankenkasse(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>160</y>
+      <w>224</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>QueueNode
+--
+- content: ContentType
+- next: QueueNode
+--
+© QueueNode(pContent: ContentType)
++ getContent(): ContentType
++ getNext(): QueueNode
++ setNext(pNext: QueueNode): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>160</y>
+      <w>240</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Queue
+--
+- head: QueueNode
+- tail: QueueNode
+--
+© Queue()
++ front(): ContentType
++ isEmpty(): boolean
++ enqueue(pContent: ContentType): void
++ dequeue(): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>232</x>
+      <y>320</y>
+      <w>208</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Verwaltung
+--
+--
+© Verwaltung()
++ eintragen(pPatient: Patient): void
++ austragen(): void
++ wartezimmerLeer(): boolean
++ naechsterPatient(): Patient</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>272</y>
+      <w>80</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- schlange</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>144</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=..
+ContentType: Patient</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>248</x>
+      <y>456</y>
+      <w>184</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>GUI
+--
+--
+© GUI()
+__+ main(args: String[]): void__</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>408</y>
+      <w>56</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- verw</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+</diagram>
